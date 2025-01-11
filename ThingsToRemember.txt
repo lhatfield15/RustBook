@@ -1,0 +1,9 @@
+Chap 1.3: cargo check
+Chap 2: 
+    prelude
+    readline appends, not replaces 
+    if you pass a ref without mut its immutable
+    Result type is enum, OK & Err
+    crates.io
+    default int is i32
+    shadowing is easy
