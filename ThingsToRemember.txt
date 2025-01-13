@@ -7,3 +7,10 @@ Chap 2:
     crates.io
     default int is i32
     shadowing is easy
+Chap 3.2
+    interger overflow panics in --debug, 2's complement wraps in --release
+Chap 3.5
+    break counter * 2; //for breaking from a loop and returning the expression
+    'counting_up: loop { } // label loop so you can later break out it from an inner loop with
+    break 'counting_up;
+
