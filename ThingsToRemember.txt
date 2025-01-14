@@ -13,4 +13,8 @@ Chap 3.5
     break counter * 2; //for breaking from a loop and returning the expression
     'counting_up: loop { } // label loop so you can later break out it from an inner loop with
     break 'counting_up;
-
+Chap 4.2
+    Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference
+    if you have a mut ref, only one ref can exist
+Chap 4.3
+    String = string, str = slice
