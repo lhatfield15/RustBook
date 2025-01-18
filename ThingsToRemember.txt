@@ -30,3 +30,26 @@ Chap 5.1
 5.3
     use impl for method on a struct
     automatic referencing and dereferencing
+6.1
+    enum with type:
+        enum IpAddr {
+            V4(String),
+            V6(String),
+        }
+    with diff types
+         enum IpAddr {
+        V4(u8, u8, u8, u8),
+        V6(String),
+    }
+
+    you can define methods on enums!
+    billion dollar mistake - null refs
+6.2
+    match must cover all possibilites
+6.3
+    use if let instead of match if you really only care about one branch
+        if let Coin::Quarter(state) = coin {
+        println!("State quarter from {state:?}!");
+    } else {
+        count += 1;
+    }
