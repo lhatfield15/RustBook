@@ -1,10 +1,9 @@
 fn main() {
-    let width1 = 30;
-    let height1 = 50;
+    let rect = (30, 50);
 
-    println!("Area is {} pixels.", area(width1, height1));
+    println!("Area is {} pixels.", area(rect));
 }
 
-fn area(w: u32, h: u32) -> u32 {
-    w * h
+fn area(dims: (u32, u32)) -> u32 {
+    dims.0 * dims.1
 }
