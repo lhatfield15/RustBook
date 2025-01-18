@@ -5,8 +5,13 @@ struct Rectangle {
 }
 
 fn main() {
-    let rect = Rectangle { w: 30, h: 50 };
+    let scale = 2;
+    let rect = Rectangle {
+        w: dbg!(30 * scale),
+        h: 50,
+    };
 
+    dbg!(&rect);
     println!("Area is {} pixels.", area(&rect));
     println!("Rect is {rect:#?}")
 }
