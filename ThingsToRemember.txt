@@ -18,3 +18,15 @@ Chap 4.2
     if you have a mut ref, only one ref can exist
 Chap 4.3
     String = string, str = slice
+Chap 5.1
+    to make a new struct with only a few diff fields. Be aware - if anything is moved, user1 is invalid
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+
+    Tuple structs for naming clarity (Point vs Color)
+
+5.3
+    use impl for method on a struct
+    automatic referencing and dereferencing

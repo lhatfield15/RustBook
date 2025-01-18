@@ -4,18 +4,14 @@ struct Rectangle {
     h: u32,
 }
 
-fn main() {
-    let scale = 2;
-    let rect = Rectangle {
-        w: dbg!(30 * scale),
-        h: 50,
-    };
-
-    dbg!(&rect);
-    println!("Area is {} pixels.", area(&rect));
-    println!("Rect is {rect:#?}")
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.w * self.h
+    }
 }
 
-fn area(rect: &Rectangle) -> u32 {
-    rect.h * rect.w
+fn main() {
+    let rect = Rectangle { w: 30, h: 50 };
+
+    println!("The area is {}", rect.area());
 }
