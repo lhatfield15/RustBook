@@ -68,3 +68,5 @@ Chap 5.1
     pub use = re exporting
     for multiple imports from same crate
         use std::{cmp::Ordering, io};
+8.3
+    hashmap uses siphash by default to help prevent DoS attacks
