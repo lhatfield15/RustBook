@@ -70,3 +70,8 @@ Chap 5.1
         use std::{cmp::Ordering, io};
 8.3
     hashmap uses siphash by default to help prevent DoS attacks
+9.1 
+    Result is for Errors, Option is for non errs
+    unwrap() mean panic if not ok
+    expect does same thing, but you can put err msg, prefer expect
+    use ? for err propogation
