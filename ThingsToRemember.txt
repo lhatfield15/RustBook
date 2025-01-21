@@ -75,3 +75,32 @@ Chap 5.1
     unwrap() mean panic if not ok
     expect does same thing, but you can put err msg, prefer expect
     use ? for err propogation
+10.1
+    generics do not run slower than concrete types, because of monomorphization 
+10.2
+    restriction to note is that we can implement a trait on a type only if either the trait or the type, or both, are local to our crate
+    Note that it isn’t possible to call the default implementation of a trait from an overriding implementation of that same method.
+    to pass traits
+        pub fn notify(item: &impl Summary) {
+            println!("Breaking news! {}", item.summarize());    
+        }
+    or for trait bound 
+        pub fn notify<T: Summary>(item: &T) {
+            println!("Breaking news! {}", item.summarize());
+        }
+    when things are complicated
+    fn some_function<T, U>(t: &T, u: &U) -> i32
+    where
+        T: Display + Clone,
+        U: Clone + Debug,
+    {}
+    10.3
+        rust chooses smaller of lifetimes
+        liftime rules (if unspecified):
+            1. each param gets its own lifetime
+            2. if only 1 input param, it's lifetime is same as output 
+            2. if multiple params and one is self, output lifetime is same as self
+        all string literals have static lifetime
+
+
+
