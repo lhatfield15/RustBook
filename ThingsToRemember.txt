@@ -94,13 +94,18 @@ Chap 5.1
         T: Display + Clone,
         U: Clone + Debug,
     {}
-    10.3
-        rust chooses smaller of lifetimes
-        liftime rules (if unspecified):
-            1. each param gets its own lifetime
-            2. if only 1 input param, it's lifetime is same as output 
-            2. if multiple params and one is self, output lifetime is same as self
-        all string literals have static lifetime
-
-
-
+10.3
+    rust chooses smaller of lifetimes
+    liftime rules (if unspecified):
+        1. each param gets its own lifetime
+        2. if only 1 input param, it's lifetime is same as output 
+        2. if multiple params and one is self, output lifetime is same as self
+    all string literals have static lifetime
+11.1
+    for testing, you'll usually need #[derive(PartialEq, Debug)]
+    if you're expecting a panic,     #[should_panic]
+11.3 
+    you can test private functions
+    integration tests go in test directory (same level as src)
+    create tests/common/mod.rs so it doesn't show up in output
+    keep main.rs basic, put complex stuff in lib.rs
